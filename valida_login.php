@@ -1,5 +1,9 @@
 <?php 
 
+	
+	session_start();
+
+
 
 	//variavel que verifica se a autenticacao foi realizada
 	$usuario_autenticado = false;
@@ -9,7 +13,6 @@
 		array('email' => 'adm@teste.com.br', 'senha' => '123456'),
 		array('email' => 'user@teste.com.br', 'senha' => 'abdc')
 	);
-
 
 
 /*
@@ -27,10 +30,12 @@
 
 	if ($usuario_autenticado == true) {
 		echo 'Usuario autenticado!';
+		$_SESSION['autenticado'] = 'SIM';
 	}
 
 	else {
 		header('Location: index.php?login=erro' ); // força o direcionamento para a pagina
+		$_SESSION['autenticado'] = 'NÃO';
 	}
 
 
