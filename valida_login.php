@@ -29,6 +29,9 @@
 	if ($usuario_autenticado == true) {
 		echo 'Usuario autenticado!';
 		$_SESSION['autenticado'] = 'SIM';
+		//$_SESSION['x'] = 'um valor';
+		//$_SESSION['y'] = 'outro valor';
+
 				header('Location: home.php' ); // força o direcionamento para a pagina
 
 	}
