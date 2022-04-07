@@ -3,8 +3,6 @@
 	
 	session_start();
 
-
-
 	//variavel que verifica se a autenticacao foi realizada
 	$usuario_autenticado = false;
 
@@ -31,6 +29,8 @@
 	if ($usuario_autenticado == true) {
 		echo 'Usuario autenticado!';
 		$_SESSION['autenticado'] = 'SIM';
+				header('Location: home.php' ); // força o direcionamento para a pagina
+
 	}
 
 	else {
