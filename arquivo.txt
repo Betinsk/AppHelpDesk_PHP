@@ -1,4 +1,0 @@
-4#User Maria#Criação Usuário#Teclado
-3#User jose#Hardware#Mouse estragou
-3#teste#Criação Usuário#sasaas#2
-4#MariaMaria#Criação Usuário#Só eu posso ver #

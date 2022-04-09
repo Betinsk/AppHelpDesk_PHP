@@ -9,13 +9,15 @@
     $chamados = array();
 
     //Abrindo o arquivo
-    $arquivo = fopen('arquivo.txt', 'r');
+    $arquivo = fopen('../../app_help_desk/arquivo.txt', 'r');
 
 
     //enquanto houver registros(linhas) a serem recuperados
     while (!feof($arquivo)) { //Testa pelo fim de um arquivo
       $registro = fgets($arquivo);
 
+
+      //Testa se o perfil logado é o esperado pela regra de exibição
       if ($_SESSION['perfil_id'] == 2) {
             // Só vamos exibir o chamado, se ele foi criado pelo usuário
               if($_SESSION['id'] == $registro[0]) {
@@ -23,6 +25,8 @@
                     }
                   }  
 
+
+                  //Se o perfil_id não atendeu o a regra ele exibe todos os chamados no array.
                   else {
                     $chamados[] = $registro;
                   }
